@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --neon-green: hsl(150, 100%, 66%);
+  --light-cyan: hsl(193, 38%, 86%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--dark-blue);
+}
+
+h1 {
+  color: var(--neon-green);
+  font-size: 14px;
+  margin: 15px 0;
+  letter-spacing: 2px;
+}
+
+main {
+  background-color: var(--dark-grayish-blue);
+  margin: 250px auto;
+  max-width: 500px;
+  width: 90%;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+main button {
+  position: absolute;
+  left: 50%;
+  bottom: -40px;
+  translate: -50% 0;
+  background-color: var(--neon-green);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  height: 65px;
+  width: 65px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+main button:hover {
+  box-shadow: 1px 0px 15px 5px rgba(82, 255, 168, 0.75);
+}
+
+main button:active {
+  scale: 1.1;
+}
+
+.pattern-img {
+  height: 20px;
+  width: 100%;
+  margin: 35px 0;
+  background: url(../images/pattern-divider-desktop.svg) no-repeat center
+    center/cover;
+}
+
+p {
+  color: var(--light-cyan);
+  font-size: 28px;
+}
+
+@media (max-width: 450px) {
+  main {
+    margin: 150px auto;
+  }
+
+  p {
+    font-size: 22px;
+  }
+
+  .pattern-img {
+    height: 15px;
+  }
+
+  main button {
+    width: 55px;
+    height: 55px;
+    bottom: -35px;
+  }
+
+  .pattern-img {
+    margin: 20px 0;
+  }
+}
